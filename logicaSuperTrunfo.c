@@ -49,10 +49,9 @@ int main () {
     // Escolha do atributo para comparação
     printf("\nDigite o atributo para comparar:\n");
     printf("1 - População\n");
-    printf("2 - População\n");
-    printf("3 - Area\n");
-    printf("4 - PIB\n");
-    printf("5 - Quantidade de Pontos Turísticos\n");
+    printf("2 - Area\n");
+    printf("3 - PIB\n");
+    printf("4 - Quantidade de Pontos Turísticos\n");
     scanf("%d", opcao);
 
     // Comparação das cartas com base no atributo escolhido
@@ -60,7 +59,35 @@ int main () {
     switch (opcao) {
         case 1:
             if (Maraba.população > Parauapebas.população) 
-                printf("A cidade vencedora é>s") 
+                printf("A cidade vencedora é: %s (Maior população)\n", Maraba.nome);
+            else
+                printf("A cidade vencedora é: %s (Maior população)\n", Parauapebas.nome);
+            break;
+
+        case 2:
+            if (Maraba.area > Parauapebas.area)
+                printf("A cidade vencedora é: %s (Maior are)\n", Maraba.nome);
+            else
+                printf("A cidade vencedora é: %s (Maior area)", Parauapebas.nome);
+            break;
+        
+        case 3:
+            if (Maraba.PIB > Parauapebas.PIB)
+                printf("A cidade vencedora é: %s (Maior PIB)\n", Maraba.nome);
+            else
+                printf("A cidade vencedora é: %s (Maior PIB)\n", Parauapebas);
+            break;
+        
+        case 4:
+            if (Maraba.pontosTuristicos > Parauapebas.pontosTuristicos)
+                printf("A cidade vencedora é: %s (Maior Pontos Turísticos)\n");
+            else
+                printf("A cidade vencedora é: %s (Maior Pontos Turísticos)\n");
+            break;
+
+        default:
+            printf("Opção inválida!\n");
+            break;
     }      
     return 0;
 
