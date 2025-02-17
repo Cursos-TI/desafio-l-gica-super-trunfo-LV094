@@ -1,43 +1,67 @@
 #include <stdio.h>
+#include <string.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
+// Estrutura para armazenar as informações das cidades
+typedef struct {
+    char nome[50];
+    int população;
+    float area;
+    float PIB;
+    int pontosTuristicos;
+} Cidade;
 
-int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
+int main () {
+    Cidade Maraba, Parauapebas;
+    int opcao;
 
-    
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
+    //Cadastro da primeira carta
+    printf("Digite o nome da primeira carta");
+    scanf(" %[^\n]", Maraba.nome);
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+    printf("Digite a população da cidade");
+    scanf("%d", Maraba.população);
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    printf("Digite a area da cidade");
+    scanf("%f", Maraba.area);
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
+    printf("Digite o PIB da cidade");
+    scanf("%f", Maraba.PIB);
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+    printf("Digite a quantidade de Pontos Turísticos");
+    scanf("%d", Maraba.pontosTuristicos);
 
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    //Cadastro da segunda cidade
+    printf("Digite o numero da segunda carta");
+    scanf(" %[^\n]", Parauapebas.nome);
 
+    printf("Digite a população da cidade");
+    scanf("%d", Parauapebas.população);
+
+    printf("Digite a area dacidade");
+    scanf("%f", Parauapebas.area);
+
+    printf("Digite o PIB da cidade");
+    scanf("%f", Parauapebas.PIB);
+
+    printf("Digite a quantidade de Pontos Turísticos");
+    scanf("d", Parauapebas.pontosTuristicos);
+
+    // Escolha do atributo para comparação
+    printf("\nDigite o atributo para comparar:\n");
+    printf("1 - População\n");
+    printf("2 - População\n");
+    printf("3 - Area\n");
+    printf("4 - PIB\n");
+    printf("5 - Quantidade de Pontos Turísticos\n");
+    scanf("%d", opcao);
+
+    // Comparação das cartas com base no atributo escolhido
+    printf("\nResultado da comparação:\n");
+    switch (opcao) {
+        case 1:
+            if (Maraba.população > Parauapebas.população) 
+                printf("A cidade vencedora é>s") 
+    }      
     return 0;
+
 }
